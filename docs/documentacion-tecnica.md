@@ -404,7 +404,7 @@ actualizan automáticamente con cada respuesta nueva.
 | Google Form (editar) | https://docs.google.com/forms/d/17dgSzPNtKv76yYcpKMxqkip9KuPLi71vo2GQt-rzgSk/edit |
 | Hoja vinculada | https://docs.google.com/spreadsheets/d/1Dlw6NM9jl7WNqjEXgLv3KHmYl5ZWPSCdxzJubgVj3pU/edit |
 | Pestaña Dashboard | https://docs.google.com/spreadsheets/d/1Dlw6NM9jl7WNqjEXgLv3KHmYl5ZWPSCdxzJubgVj3pU/edit#gid=1262206621 |
-| Neon | Proyecto `wandering-waterfall-56332798`, endpoint `ep-polished-lab-bb4ln3f5-pooler.c-15.us-east-1.aws.neon.tech`, base `neondb`, esquema `soporte` |
+| Neon | Proyecto **proyecto segundo corte** (`wandering-waterfall-56332798`), rama `production` (`br-crimson-hat-bdflz944`), endpoint `ep-super-cake-bdm9ovcp-pooler.c-8.us-east-2.aws.neon.tech`, base `neondb`, esquema `soporte` |
 | n8n | http://localhost:5678/workflow/6TYccmWgSj3tAjYx |
 
 ### Notas de operación
