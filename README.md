@@ -77,7 +77,7 @@ curl http://localhost:3000/api/estadisticas
 ### Ejemplo: registrar una solicitud
 
 ```bash
-curl -X POST https://TU-API.onrender.com/api/solicitudes \
+curl -X POST https://soporte-api-1oox.onrender.com/api/solicitudes \
   -H "Content-Type: application/json" \
   -d '{
     "nombre": "Ana López",

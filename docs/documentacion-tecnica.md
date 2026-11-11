@@ -144,7 +144,7 @@ El script `scripts/migrate.js` ejecuta `db/schema.sql` (creación idempotente co
 
 ## 5. API REST
 
-**URL base:** `__API_URL__`
+**URL base:** `https://soporte-api-1oox.onrender.com`
 
 ### 5.1 Endpoints
 
@@ -168,7 +168,7 @@ El script `scripts/migrate.js` ejecuta `db/schema.sql` (creación idempotente co
 **Registrar**
 
 ```bash
-curl -X POST __API_URL__/api/solicitudes \
+curl -X POST https://soporte-api-1oox.onrender.com/api/solicitudes \
   -H "Content-Type: application/json" \
   -d '{
     "nombre": "Ana López",
@@ -199,14 +199,14 @@ curl -X POST __API_URL__/api/solicitudes \
 **Consultar**
 
 ```bash
-curl "__API_URL__/api/solicitudes?prioridad=Alta&limit=10"
-curl "__API_URL__/api/solicitudes/SOL-2026-0001"
+curl "https://soporte-api-1oox.onrender.com/api/solicitudes?prioridad=Alta&limit=10"
+curl "https://soporte-api-1oox.onrender.com/api/solicitudes/SOL-2026-0001"
 ```
 
 **Actualizar**
 
 ```bash
-curl -X PATCH __API_URL__/api/solicitudes/SOL-2026-0001 \
+curl -X PATCH https://soporte-api-1oox.onrender.com/api/solicitudes/SOL-2026-0001 \
   -H "Content-Type: application/json" \
   -d '{"estado": "En proceso", "respuesta": "Se revisó el equipo y se reemplazó la fuente."}'
 ```
