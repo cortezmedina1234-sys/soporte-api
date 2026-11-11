@@ -17,6 +17,19 @@ Google Forms  ->  Google Sheets  ->  n8n  ->  API REST (Render)  ->  PostgreSQL 
                                                 +-->  Dashboard (gráficas)
 ```
 
+## Enlaces del proyecto (instancia funcional)
+
+| Recurso | URL |
+| --- | --- |
+| API REST (Render) | https://soporte-api-1oox.onrender.com |
+| Health check | https://soporte-api-1oox.onrender.com/health |
+| Repositorio (GitHub) | https://github.com/cortezmedina1234-sys/soporte-api |
+| Google Form (responder) | https://docs.google.com/forms/d/e/1FAIpQLSdN0-eA9ZUf063S9MAwIKDnl7BkWIHOk8mGxUx2iMI4A7GJ0g/viewform |
+| Google Form (editar) | https://docs.google.com/forms/d/17dgSzPNtKv76yYcpKMxqkip9KuPLi71vo2GQt-rzgSk/edit |
+| Hoja de respuestas + Dashboard | https://docs.google.com/spreadsheets/d/1Dlw6NM9jl7WNqjEXgLv3KHmYl5ZWPSCdxzJubgVj3pU/edit#gid=1262206621 |
+| Base de datos (Neon) | Proyecto `wandering-waterfall-56332798`, base `neondb`, esquema `soporte` |
+| Workflow n8n | http://localhost:5678/workflow/6TYccmWgSj3tAjYx |
+
 ## Estructura del repositorio
 
 ```

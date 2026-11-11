@@ -42,7 +42,7 @@
     {
       "parameters": {
         "method": "GET",
-        "url": "__API_URL__/health",
+        "url": "https://soporte-api-1oox.onrender.com/health",
         "options": {
           "timeout": 60000,
           "response": {
@@ -63,7 +63,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "__SPREADSHEET_ID__",
+          "value": "1Dlw6NM9jl7WNqjEXgLv3KHmYl5ZWPSCdxzJubgVj3pU",
           "mode": "id"
         },
         "sheetName": {
@@ -128,7 +128,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// Normaliza la fila de Google Sheets y arma el cuerpo para la API\nconst fila = $json;\nconst texto = (v) => (v === undefined || v === null ? '' : String(v).trim());\n\nconst correo = texto(fila['Correo electrónico'] || fila['Dirección de correo electrónico']).toLowerCase();\nconst nombre = texto(fila['Nombre completo']);\nconst descripcion = texto(fila['Descripción del problema']);\n\n// Si la fila esta incompleta se ignora\nif (!correo || !nombre || !descripcion) {\n  return [];\n}\n\nconst hoja = '__SPREADSHEET_ID__';\n\nreturn [{\n  json: {\n    row_number: fila.row_number,\n    nombre,\n    correo,\n    telefono: texto(fila['Teléfono']) || null,\n    categoria: texto(fila['Categoría']) || 'Otro',\n    prioridad: texto(fila['Prioridad']) || 'Media',\n    descripcion,\n    ubicacion: texto(fila['Ubicación / equipo']) || null,\n    origen: 'Google Forms',\n    clave_origen: 'sheet:' + hoja + ':' + fila.row_number,\n  },\n}];"
+        "jsCode": "// Normaliza la fila de Google Sheets y arma el cuerpo para la API\nconst fila = $json;\nconst texto = (v) => (v === undefined || v === null ? '' : String(v).trim());\n\nconst correo = texto(fila['Correo electrónico'] || fila['Dirección de correo electrónico']).toLowerCase();\nconst nombre = texto(fila['Nombre completo']);\nconst descripcion = texto(fila['Descripción del problema']);\n\n// Si la fila esta incompleta se ignora\nif (!correo || !nombre || !descripcion) {\n  return [];\n}\n\nconst hoja = '1Dlw6NM9jl7WNqjEXgLv3KHmYl5ZWPSCdxzJubgVj3pU';\n\nreturn [{\n  json: {\n    row_number: fila.row_number,\n    nombre,\n    correo,\n    telefono: texto(fila['Teléfono']) || null,\n    categoria: texto(fila['Categoría']) || 'Otro',\n    prioridad: texto(fila['Prioridad']) || 'Media',\n    descripcion,\n    ubicacion: texto(fila['Ubicación / equipo']) || null,\n    origen: 'Google Forms',\n    clave_origen: 'sheet:' + hoja + ':' + fila.row_number,\n  },\n}];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -139,7 +139,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "__API_URL__/api/solicitudes",
+        "url": "https://soporte-api-1oox.onrender.com/api/solicitudes",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={{ JSON.stringify($json) }}",
@@ -177,7 +177,7 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "__SPREADSHEET_ID__",
+          "value": "1Dlw6NM9jl7WNqjEXgLv3KHmYl5ZWPSCdxzJubgVj3pU",
           "mode": "id"
         },
         "sheetName": {
@@ -277,8 +277,8 @@
       "name": "Notificar por Gmail",
       "credentials": {
         "gmailOAuth2": {
-          "id": "hw3L1StwmRzho8Z7",
-          "name": "Gmail Fernando 703"
+          "id": "7ZtjLgStZpyDzYL8",
+          "name": "Gmail - Solicitudes de soporte"
         }
       }
     }

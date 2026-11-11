@@ -390,3 +390,28 @@ actualizan automáticamente con cada respuesta nueva.
 - Panel web propio (fuera de Sheets) consumiendo `/api/estadisticas`.
 - Notificaciones por WhatsApp o Telegram.
 - Tiempos de atención (SLA) y encuestas de satisfacción.
+
+---
+
+## 13. Enlaces de la instancia desplegada
+
+| Recurso | URL / dato |
+| --- | --- |
+| API REST | https://soporte-api-1oox.onrender.com |
+| Health | https://soporte-api-1oox.onrender.com/health |
+| Repositorio GitHub | https://github.com/cortezmedina1234-sys/soporte-api |
+| Google Form (responder) | https://docs.google.com/forms/d/e/1FAIpQLSdN0-eA9ZUf063S9MAwIKDnl7BkWIHOk8mGxUx2iMI4A7GJ0g/viewform |
+| Google Form (editar) | https://docs.google.com/forms/d/17dgSzPNtKv76yYcpKMxqkip9KuPLi71vo2GQt-rzgSk/edit |
+| Hoja vinculada | https://docs.google.com/spreadsheets/d/1Dlw6NM9jl7WNqjEXgLv3KHmYl5ZWPSCdxzJubgVj3pU/edit |
+| Pestaña Dashboard | https://docs.google.com/spreadsheets/d/1Dlw6NM9jl7WNqjEXgLv3KHmYl5ZWPSCdxzJubgVj3pU/edit#gid=1262206621 |
+| Neon | Proyecto `wandering-waterfall-56332798`, endpoint `ep-polished-lab-bb4ln3f5-pooler.c-15.us-east-1.aws.neon.tech`, base `neondb`, esquema `soporte` |
+| n8n | http://localhost:5678/workflow/6TYccmWgSj3tAjYx |
+
+### Notas de operación
+
+- El workflow de n8n corre cada **2 minutos** y está **activo**.
+- El primer nodo (`Mantener API activa`) hace un `GET /health` para evitar el arranque en frío de Render.
+- Si Render devuelve su página de carga, el nodo `Validar respuesta de la API` descarta esa ejecución y la fila se reprocesa en el siguiente ciclo (no se pierde la solicitud).
+- Las credenciales OAuth de Google están en modo *Testing* en Google Cloud: el **refresh token caduca a los 7 días**. Para uso prolongado, publicar la app de OAuth o volver a autorizar las credenciales de n8n.
+- Las columnas `Folio`, `Estado`, `Fecha de registro` y `Notificado` las escribe n8n; las ocho primeras columnas las genera Google Forms.
+- El dashboard usa referencias de **columna completa** (`Respuestas!B:B`) para que las fórmulas no se desplacen cuando Forms inserta nuevas filas.
